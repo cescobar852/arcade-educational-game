@@ -1,5 +1,6 @@
 package com.arcade;
 
+import com.arcade.service.QuestionService;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -24,6 +25,7 @@ public class MainApplication extends Application {
         stage.setTitle("Arcade Educational Game");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {

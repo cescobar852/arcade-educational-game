@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "category": "programming",
+    "difficulty": "easy",
+    "questionText": "What does this code print?",
+    "extraContent": "int x = 2 + 2;\nSystem.out.println(x);",
+    "options": [
+      "2",
+      "4",
+      "22",
+      "Error"
+    ],
+    "correctAnswer": "4"
+  },
+  {
+    "id": 2,
+    "category": "programming",
+    "difficulty": "easy",
+    "questionText": "What does this code print?",
+    "extraContent": "boolean flag = true;\nSystem.out.println(!flag);",
+    "options": [
+      "true",
+      "false",
+      "1",
+      "0"
+    ],
+    "correctAnswer": "false"
+  },
+  {
+    "id": 3,
+    "category": "programming",
+    "difficulty": "easy",
+    "questionText": "Which keyword is used to define a class in Java?",
+    "extraContent": "public class Demo { }",
+    "options": [
+      "class",
+      "define",
+      "object",
+      "new"
+    ],
+    "correctAnswer": "class"
+  },
+  {
+    "id": 4,
+    "category": "programming",
+    "difficulty": "medium",
+    "questionText": "What is the value of result after this code runs?",
+    "extraContent": "int result = 10 / 2 + 3;",
+    "options": [
+      "5",
+      "8",
+      "13",
+      "6"
+    ],
+    "correctAnswer": "8"
+  },
+  {
+    "id": 5,
+    "category": "programming",
+    "difficulty": "medium",
+    "questionText": "What does this code print?",
+    "extraContent": "String text = \"Java\";\nSystem.out.println(text.substring(1, 3));",
+    "options": [
+      "Ja",
+      "av",
+      "va",
+      "Java"
+    ],
+    "correctAnswer": "av"
+  },
+  {
+    "id": 6,
+    "category": "programming",
+    "difficulty": "hard",
+    "questionText": "What does this code print?",
+    "extraContent": "int count = 0;\nfor (int i = 1; i <= 3; i++) {\n    for (int j = 1; j <= i; j++) {\n        count++;\n    }\n}\nSystem.out.println(count);",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "9"
+    ],
+    "correctAnswer": "6"
+  },
+  {
+    "id": 7,
+    "category": "programming",
+    "difficulty": "hard",
+    "questionText": "What is the value of total after this code runs?",
+    "extraContent": "int total = 1;\nfor (int i = 1; i <= 4; i++) {\n    total += i;\n}",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "correctAnswer": "11"
+  }
+]
