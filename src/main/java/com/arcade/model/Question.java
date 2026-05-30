@@ -1,10 +1,14 @@
 package com.arcade.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Represents a question as pure data for the arcade educational game.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Question {
 
     private Integer id;
@@ -36,7 +40,7 @@ public class Question {
                     String extraContent, List<String> options, String correctAnswer) {
         this.id = id;
         this.category = category;
-        this.difficulty = difficulty;
+        setDifficulty(difficulty);
         this.questionText = questionText;
         this.extraContent = extraContent;
         this.options = options;
@@ -90,11 +94,23 @@ public class Question {
 
     /**
      * Sets the question difficulty.
+     * The stored value is normalized to uppercase when present.
      *
      * @param difficulty the question difficulty
      */
     public void setDifficulty(String difficulty) {
-        this.difficulty = difficulty;
+        if (difficulty == null) {
+            this.difficulty = null;
+            return;
+        }
+
+        String normalizedDifficulty = difficulty.trim();
+        if (normalizedDifficulty.isEmpty()) {
+            this.difficulty = null;
+            return;
+        }
+
+        this.difficulty = normalizedDifficulty.toUpperCase(Locale.ROOT);
     }
 
     /**

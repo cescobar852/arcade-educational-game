@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "category": "programming",
-    "difficulty": "easy",
+    "category": "Programming",
+    "difficulty": "EASY",
     "questionText": "What does this code print?",
     "extraContent": "int x = 2 + 2;\nSystem.out.println(x);",
     "options": [
@@ -15,8 +15,8 @@
   },
   {
     "id": 2,
-    "category": "programming",
-    "difficulty": "easy",
+    "category": "Programming",
+    "difficulty": "EASY",
     "questionText": "What does this code print?",
     "extraContent": "boolean flag = true;\nSystem.out.println(!flag);",
     "options": [
@@ -29,72 +29,291 @@
   },
   {
     "id": 3,
-    "category": "programming",
-    "difficulty": "easy",
-    "questionText": "Which keyword is used to define a class in Java?",
-    "extraContent": "public class Demo { }",
+    "category": "Programming",
+    "difficulty": "EASY",
+    "questionText": "Which keyword declares a constant in Java?",
     "options": [
-      "class",
-      "define",
-      "object",
-      "new"
+      "final",
+      "static",
+      "const",
+      "private"
     ],
-    "correctAnswer": "class"
+    "correctAnswer": "final"
   },
   {
     "id": 4,
-    "category": "programming",
-    "difficulty": "medium",
-    "questionText": "What is the value of result after this code runs?",
-    "extraContent": "int result = 10 / 2 + 3;",
+    "category": "Programming",
+    "difficulty": "EASY",
+    "questionText": "What is the default value of a boolean field in Java?",
     "options": [
-      "5",
-      "8",
-      "13",
-      "6"
+      "true",
+      "false",
+      "0",
+      "null"
     ],
-    "correctAnswer": "8"
+    "correctAnswer": "false"
   },
   {
     "id": 5,
-    "category": "programming",
-    "difficulty": "medium",
-    "questionText": "What does this code print?",
-    "extraContent": "String text = \"Java\";\nSystem.out.println(text.substring(1, 3));",
+    "category": "Programming",
+    "difficulty": "MEDIUM",
+    "questionText": "What does this loop print?",
+    "extraContent": "for (int i = 1; i <= 3; i++) {\n    System.out.print(i);\n}",
     "options": [
-      "Ja",
-      "av",
-      "va",
-      "Java"
+      "123",
+      "012",
+      "321",
+      "33"
     ],
-    "correctAnswer": "av"
+    "correctAnswer": "123"
   },
   {
     "id": 6,
-    "category": "programming",
-    "difficulty": "hard",
-    "questionText": "What does this code print?",
-    "extraContent": "int count = 0;\nfor (int i = 1; i <= 3; i++) {\n    for (int j = 1; j <= i; j++) {\n        count++;\n    }\n}\nSystem.out.println(count);",
+    "category": "Programming",
+    "difficulty": "MEDIUM",
+    "questionText": "What is the result of 10 / 4 in integer arithmetic?",
     "options": [
+      "2",
+      "2.5",
       "3",
-      "5",
-      "6",
-      "9"
+      "4"
     ],
-    "correctAnswer": "6"
+    "correctAnswer": "2"
   },
   {
     "id": 7,
-    "category": "programming",
-    "difficulty": "hard",
-    "questionText": "What is the value of total after this code runs?",
-    "extraContent": "int total = 1;\nfor (int i = 1; i <= 4; i++) {\n    total += i;\n}",
+    "category": "Programming",
+    "difficulty": "MEDIUM",
+    "questionText": "Which collection does not allow duplicate elements?",
+    "options": [
+      "List",
+      "Set",
+      "Queue",
+      "Array"
+    ],
+    "correctAnswer": "Set"
+  },
+  {
+    "id": 8,
+    "category": "Programming",
+    "difficulty": "MEDIUM",
+    "questionText": "Which access modifier makes a member visible only inside its own class?",
+    "options": [
+      "private",
+      "protected",
+      "public",
+      "default"
+    ],
+    "correctAnswer": "private"
+  },
+  {
+    "id": 9,
+    "category": "Programming",
+    "difficulty": "HARD",
+    "questionText": "What is the output of this code?",
+    "extraContent": "String text = \"arcade\";\nSystem.out.println(text.substring(2, 4));",
+    "options": [
+      "ca",
+      "rc",
+      "ad",
+      "de"
+    ],
+    "correctAnswer": "ca"
+  },
+  {
+    "id": 10,
+    "category": "Programming",
+    "difficulty": "HARD",
+    "questionText": "Which concept allows the same method name to behave differently based on parameters?",
+    "options": [
+      "Overloading",
+      "Inheritance",
+      "Encapsulation",
+      "Abstraction"
+    ],
+    "correctAnswer": "Overloading"
+  },
+  {
+    "id": 11,
+    "category": "Programming",
+    "difficulty": "HARD",
+    "questionText": "What does this code print?",
+    "extraContent": "int[] values = {1, 2, 3};\nSystem.out.println(values.length);",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "correctAnswer": "3"
+  },
+  {
+    "id": 12,
+    "category": "Programming",
+    "difficulty": "HARD",
+    "questionText": "Which statement best describes recursion?",
+    "options": [
+      "A function calling itself",
+      "A loop with no condition",
+      "A class inheriting itself",
+      "A variable changing type"
+    ],
+    "correctAnswer": "A function calling itself"
+  },
+  {
+    "id": 13,
+    "category": "Mathematics",
+    "difficulty": "EASY",
+    "questionText": "What is 7 + 5?",
     "options": [
       "10",
       "11",
       "12",
       "13"
     ],
-    "correctAnswer": "11"
+    "correctAnswer": "12"
+  },
+  {
+    "id": 14,
+    "category": "Mathematics",
+    "difficulty": "EASY",
+    "questionText": "What is 9 - 4?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "correctAnswer": "5"
+  },
+  {
+    "id": 15,
+    "category": "Mathematics",
+    "difficulty": "EASY",
+    "questionText": "What is 3 x 4?",
+    "options": [
+      "7",
+      "8",
+      "12",
+      "14"
+    ],
+    "correctAnswer": "12"
+  },
+  {
+    "id": 16,
+    "category": "Mathematics",
+    "difficulty": "EASY",
+    "questionText": "What is 20 / 5?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correctAnswer": "4"
+  },
+  {
+    "id": 17,
+    "category": "Mathematics",
+    "difficulty": "MEDIUM",
+    "questionText": "What is 9 x 3 - 6?",
+    "options": [
+      "18",
+      "21",
+      "24",
+      "27"
+    ],
+    "correctAnswer": "21"
+  },
+  {
+    "id": 18,
+    "category": "Mathematics",
+    "difficulty": "MEDIUM",
+    "questionText": "What is the value of 2^4?",
+    "options": [
+      "6",
+      "8",
+      "12",
+      "16"
+    ],
+    "correctAnswer": "16"
+  },
+  {
+    "id": 19,
+    "category": "Mathematics",
+    "difficulty": "MEDIUM",
+    "questionText": "What is 15 + 8 - 3?",
+    "options": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "correctAnswer": "20"
+  },
+  {
+    "id": 20,
+    "category": "Mathematics",
+    "difficulty": "MEDIUM",
+    "questionText": "What is the square root of 81?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "correctAnswer": "9"
+  },
+  {
+    "id": 21,
+    "category": "Mathematics",
+    "difficulty": "HARD",
+    "questionText": "What is 12 x 11?",
+    "options": [
+      "112",
+      "121",
+      "132",
+      "143"
+    ],
+    "correctAnswer": "132"
+  },
+  {
+    "id": 22,
+    "category": "Mathematics",
+    "difficulty": "HARD",
+    "questionText": "What is the value of (8 + 4) x 3?",
+    "options": [
+      "24",
+      "30",
+      "32",
+      "36"
+    ],
+    "correctAnswer": "36"
+  },
+  {
+    "id": 23,
+    "category": "Mathematics",
+    "difficulty": "HARD",
+    "questionText": "What is 144 / 12?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "correctAnswer": "12"
+  },
+  {
+    "id": 24,
+    "category": "Mathematics",
+    "difficulty": "HARD",
+    "questionText": "What is 7^2 + 1?",
+    "options": [
+      "48",
+      "49",
+      "50",
+      "51"
+    ],
+    "correctAnswer": "50"
   }
 ]
