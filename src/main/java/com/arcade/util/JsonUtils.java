@@ -14,7 +14,7 @@ import java.util.List;
  */
 public final class JsonUtils {
 
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+    private static final ObjectMapper OBJECT_MAPPER = createObjectMapper();
     private static final String QUESTIONS_RESOURCE_PATH = "/questions.json";
 
     private JsonUtils() {
@@ -60,6 +60,15 @@ public final class JsonUtils {
                     exception
             );
         }
+    }
+
+    /**
+     * Creates a new object mapper configured for the application JSON format.
+     *
+     * @return a new object mapper instance
+     */
+    public static ObjectMapper createObjectMapper() {
+        return new ObjectMapper();
     }
 
     private static String normalizeResourcePath(String resourcePath) {
