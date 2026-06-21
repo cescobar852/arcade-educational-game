@@ -1,0 +1,121 @@
+@startuml
+
+package model {
+  class Question {
+    - id: String
+    - text: String
+    - answers: List<Answer>
+    - correctIndex: int
+    + isCorrect(choiceIndex:int): boolean
+  }
+
+  class Answer {
+    - text: String
+    + getText(): String
+  }
+
+  class Score {
+    - points: int
+    + addPoints(value:int): void
+    + reset(): void
+    + getPoints(): int
+  }
+
+  class Player {
+    - name: String
+    - score: Score
+    + getName(): String
+    + getScore(): Score
+  }
+
+  class GameState {
+    - currentLevel: int
+    - isPaused: boolean
+    + pause(): void
+    + resume(): void
+  }
+}
+
+package service {
+  class QuestionService {
+    - questions: List<Question>
+    + loadQuestionsFromJson(path:String): void
+    + getAllQuestions(): List<Question>
+    + getNextQuestion(): Question
+  }
+
+  class GameService {
+    - questionService: QuestionService
+    - rankingService: RankingService
+    - currentPlayer: Player
+    - state: GameState
+    + startGame(player:Player): void
+    + submitAnswer(question:Question, answerIndex:int): boolean
+    + endGame(): void
+    + getScore(): Score
+  }
+
+  class RankingService {
+    - rankingPath: String
+    + saveRanking(player:Player): void
+    + loadRanking(): List<Player>
+  }
+}
+
+package controller {
+  class GameController {
+    - gameService: GameService
+    + onStart(): void
+    + onAnswerSelected(answerIndex:int): void
+    + onEnd(): void
+  }
+
+  class MenuController {
+    - gameService: GameService
+    + onNewGame(): void
+    + onLoad(): void
+  }
+
+  class RankingController {
+    - rankingService: RankingService
+    + showRanking(): void
+    + onExport(): void
+  }
+}
+
+package util {
+  class JsonUtils {
+    + readJson(path:String): String
+    + parseQuestions(json:String): List<Question>
+  }
+
+  class FileUtils {
+    + readFile(path:String): String
+    + writeFile(path:String, content:String): void
+  }
+}
+
+package config {
+  class AppConfig {
+    + QUESTIONS_PATH: String
+    + RANKING_PATH: String
+    + get(key:String): String
+  }
+}
+
+' Relationships (simple, low complexity)
+Question "1" -- "*" Answer : contains
+Player "1" *-- "1" Score : has
+GameService ..> QuestionService : uses
+GameService ..> RankingService : uses
+GameController ..> GameService
+MenuController ..> GameService
+RankingController ..> RankingService
+QuestionService ..> JsonUtils
+RankingService ..> FileUtils
+JsonUtils ..> FileUtils
+GameService ..> AppConfig
+QuestionService ..> AppConfig
+RankingService ..> AppConfig
+
+@enduml
