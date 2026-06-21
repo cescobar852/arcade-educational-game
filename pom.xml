@@ -91,6 +91,32 @@
                 </configuration>
             </plugin>
 
+            <!-- JavaDoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.8.0</version>
+
+                <executions>
+                    <execution>
+                        <id>generate-javadocs</id>
+
+                        <phase>site</phase>
+
+                        <goals>
+                            <goal>javadoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <destDir>docs/javadoc</destDir>
+                    <encoding>UTF-8</encoding>
+                    <source>17</source>
+                    <failOnError>false</failOnError>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

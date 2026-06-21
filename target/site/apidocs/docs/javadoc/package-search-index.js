@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.arcade"},{"l":"com.arcade.controller"},{"l":"com.arcade.model"},{"l":"com.arcade.service"},{"l":"com.arcade.util"},{"l":"com.arcade.view"}];updateSearchResults();
