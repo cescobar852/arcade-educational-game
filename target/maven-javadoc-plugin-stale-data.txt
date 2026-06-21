@@ -1,0 +1,65 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'C:/Users/Crist/.m2/repository/org/openjfx/javafx-controls/21/javafx-controls-21.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-controls/21/javafx-controls-21-win.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-graphics/21/javafx-graphics-21.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-graphics/21/javafx-graphics-21-win.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-base/21/javafx-base-21.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-base/21/javafx-base-21-win.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-fxml/21/javafx-fxml-21.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-fxml/21/javafx-fxml-21-win.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-media/21/javafx-media-21.jar;C:/Users/Crist/.m2/repository/org/openjfx/javafx-media/21/javafx-media-21-win.jar;C:/Users/Crist/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar;C:/Users/Crist/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar;C:/Users/Crist/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/Crist/IdeaProjects/arcade-educational-game/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Crist/IdeaProjects/arcade-educational-game/target/site/apidocs/docs/javadoc'
+-docencoding
+'UTF-8'
+-doctitle
+'arcade-educational-game 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'arcade-educational-game 1.0-SNAPSHOT API'
+com.arcade.controller
+com.arcade
+com.arcade.model
+com.arcade.service
+com.arcade.util
+com.arcade.view
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21.jar = 1780153073136
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21-win.jar = 1780153074417
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21.jar = 1780153072800
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21-win.jar = 1780153074655
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21.jar = 1780153074540
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21-win.jar = 1780153073433
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21.jar = 1780153073549
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21-win.jar = 1780153072956
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-media\21\javafx-media-21.jar = 1781971464800
+C:\Users\Crist\.m2\repository\org\openjfx\javafx-media\21\javafx-media-21-win.jar = 1781971466751
+C:\Users\Crist\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar = 1780153074355
+C:\Users\Crist\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar = 1780153074463
+C:\Users\Crist\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar = 1780153073443
+C:\Users\Crist\IdeaProjects\arcade-educational-game\src\main\java = 1780152931743
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\allclasses-index.html = 1782006785176
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\allpackages-index.html = 1782006785184
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\element-list = 1782006784604
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\help-doc.html = 1782006785286
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\index-all.html = 1782006785272
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\index.html = 1782006785126
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\jquery-ui.overrides.css = 1782006785337
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\member-search-index.js = 1782006785202
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\module-search-index.js = 1782006785190
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\overview-summary.html = 1782006785277
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\overview-tree.html = 1782006785117
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\package-search-index.js = 1782006785195
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\script.js = 1782006785296
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\search.js = 1782006785301
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\stylesheet.css = 1782006785292
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\tag-search-index.js = 1782006785206
+C:\Users\Crist\IdeaProjects\arcade-educational-game\target\site\apidocs\docs\javadoc\type-search-index.js = 1782006785198
