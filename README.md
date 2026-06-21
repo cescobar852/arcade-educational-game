@@ -1,249 +1,222 @@
 # Mentix
+Academic Java arcade game developed with Java and JavaFX.
 
-Mentix is an educational arcade game project developed for the Programming Paradigms course at Politécnico Grancolombiano.
+## Project Description
+Mentix is a feature-complete arcade quiz game that started as a console prototype and was completed as a JavaFX graphical application. The player selects a category, answers one question at a time, and tries to finish the session with the highest possible score before losing all lives.
 
-The project is being built using a modular MVC hybrid architecture with a strong focus on separating educational content from game logic.
+The gameplay is organized around:
 
-At the current stage, the project is focused on backend and terminal-based game flow validation before integrating JavaFX interfaces.
+- category selection from the available JSON-loaded content
+- one question on screen at a time
+- four answer options per question
+- a lives system with 3 starting lives
+- difficulty-based scoring
+- a historical ranking stored with each completed match
 
----
+Scoring is based on question difficulty:
 
-# Current Development Status
+- Easy: 100 points
+- Medium: 200 points
+- Hard: 300 points
 
-Current implemented features:
+Each game session is composed of 12 questions:
 
-* Maven project setup
-* Java 17 configuration
-* JavaFX integration
-* Modular question system
-* JSON-based question loading
-* Jackson deserialization
-* Question service layer
-* Backend modular architecture
+- 4 easy questions
+- 4 medium questions
+- 4 hard questions
 
-Current execution mode:
-
-* Terminal/backend validation
-* No graphical interface implemented yet
-
----
-
-# Tech Stack
-
-* Java 17.0.19
-* Eclipse Temurin JDK
-* JavaFX 21
-* Maven Wrapper 3.9.16
-* Jackson
-* JUnit 5
-
----
-
-# Recommended IDE
-
-Recommended IDE:
-
-* IntelliJ IDEA Community or Ultimate Edition
-
-The project was configured and tested primarily using IntelliJ IDEA.
-
----
-
-# Requirements
-
-Before running the project, make sure you have installed:
-
-## Required
-
-* Java JDK 17
-* Git
-
-## Optional but Recommended
-
-* IntelliJ IDEA
-
----
-
-# Verify Installed Versions
-
-## Check Java Version
-
-```bash
-java -version
-```
-
-Expected output example:
+Final user flow:
 
 ```text
-openjdk version "17.0.19"
+Main Menu
+-> Category Selection
+-> Gameplay
+-> Result
+-> Ranking
 ```
 
----
+The current question bank includes the `Programming` and `Mathematics` categories, each organized by difficulty. The ranking stores the player name, final score, and play timestamp so previous results can be reviewed as a historical record.
 
-## Check Maven Wrapper Version
-
-Windows CMD or PowerShell:
-
-```bash
-mvnw.cmd -version
-```
-
-Git Bash:
-
-```bash
-./mvnw -version
-```
-
-Expected output example:
+## Architecture Overview
+Mentix uses a clear separation between backend and frontend concerns.
 
 ```text
-Apache Maven 3.9.16
+Backend
+-> Frontend
 ```
 
----
+Backend responsibilities:
 
-# Clone the Repository
+- game rules
+- score calculation
+- lives management
+- question flow
+- ranking persistence
+
+Frontend responsibilities:
+
+- rendering
+- player interaction
+- visual assets
+- JavaFX views
+
+This separation reduced implementation friction because the game logic remained stable while the interface, layout, and assets evolved independently. Controllers connect both layers, but the business rules stay in the backend services.
+
+## Technologies Used
+- Java 17 - core language and runtime.
+- JavaFX 21 - graphical interface, screen navigation, and media playback.
+- Maven Wrapper with Apache Maven 3.9.16 - repeatable builds and dependency management.
+- Maven Compiler Plugin 3.11.0 - compiles the project against Java 17.
+- JavaFX Maven Plugin 0.0.8 - runs the JavaFX entry point from Maven.
+- Jackson 2.17.2 - JSON parsing and serialization for questions and ranking data.
+- JSON - external storage format for the question bank and ranking file.
+- JUnit 5.10.2 - automated service tests.
+
+## Project Structure
+```text
+src/
+  main/
+    java/
+      com/arcade/
+        MainApplication.java
+        controller/
+        model/
+        service/
+        util/
+        view/
+    resources/
+      audio/
+        8-Bit jingles/
+      images/
+        backgrounds/
+        cards/
+        icons/
+      questions.json
+      ranking.json
+  test/
+    java/
+      com/arcade/service/
+```
+
+- `controller/` - screen navigation and JavaFX flow coordination.
+- `model/` - question, session, and ranking data objects.
+- `service/` - game logic, question loading, ranking persistence, and audio playlist handling.
+- `util/` - JSON helper utilities.
+- `view/` - reusable JavaFX UI components and screen composition.
+- `resources/` - backgrounds, spritesheets, icons, audio, and persistent JSON data.
+- `src/test/java/` - automated service tests.
+
+## Installation
+Prerequisites:
+
+- Java JDK 17
+- Git
+- An IDE such as IntelliJ IDEA, if you want to run from the editor
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/cescobar852/arcade-educational-game.git
-```
-
-Then enter the project folder:
-
-```bash
 cd arcade-educational-game
 ```
 
----
-
-# Official Build Tool
-
-This project uses Maven Wrapper as the official build and dependency management tool.
-
-Do not rely on globally installed Maven versions.
-
-Use:
-
-Windows CMD or PowerShell:
+Build the project and download dependencies:
 
 ```bash
-mvnw.cmd
+./mvnw.cmd clean compile
 ```
 
-Git Bash:
-
-```bash
-./mvnw
-```
-
-The wrapper guarantees that all team members use the same Maven environment and dependency versions.
-
----
-
-# Download Dependencies and Compile
-
-The first execution may take several minutes because Maven Wrapper will automatically download all required dependencies.
-
-To download dependencies and compile the project:
-
-Windows CMD or PowerShell:
-
-```bash
-mvnw.cmd clean compile
-```
-
-Git Bash:
+Or, on Git Bash and Unix-like shells:
 
 ```bash
 ./mvnw clean compile
 ```
 
-This process automatically downloads:
-
-* JavaFX
-* Jackson
-* JUnit
-* Maven plugins
-
----
-
-# Run the Project
-
-The project currently runs in backend/terminal validation mode.
-
-Windows CMD or PowerShell:
+Run the test suite:
 
 ```bash
-mvnw.cmd javafx:run
+./mvnw.cmd test
 ```
 
-Git Bash:
+Or:
+
+```bash
+./mvnw test
+```
+
+Refresh Maven dependencies when needed:
+
+```bash
+./mvnw.cmd -U clean compile
+```
+
+Or:
+
+```bash
+./mvnw -U clean compile
+```
+
+The first execution downloads JavaFX, Jackson, JUnit, and the Maven plugins automatically. No separate Maven installation is required.
+
+## Running The Project
+Run from the IDE:
+
+- Open the project as a Maven project.
+- Run `com.arcade.MainApplication`.
+
+Run from Maven:
+
+```bash
+./mvnw.cmd javafx:run
+```
+
+Or:
 
 ```bash
 ./mvnw javafx:run
 ```
 
----
+Expected startup flow:
 
-# Current Backend Validation
+- the JavaFX window opens at a fixed 1280x720 size
+- the main menu appears
+- the audio playlist starts
+- the player selects a category
+- gameplay begins
 
-The current backend implementation validates:
+Requirements:
 
-* External JSON question loading
-* Question deserialization
-* Modular question architecture
-* Question service layer
-* Backend-only game foundation
+- Java 17 installed and available on the path
+- JavaFX resolved through Maven
+- the project root as the working directory when using Maven commands
 
-The current focus is validating backend logic before implementing graphical interfaces.
+## Assets And Audio
+Static visual assets are stored under `src/main/resources/images/` and include:
 
----
+- `backgrounds/` for the menu and game screens
+- `cards/` for the answer card spritesheet
+- `icons/` for UI indicators such as lives and play actions
 
-# Project Structure
+Audio assets are stored under `src/main/resources/audio/8-Bit jingles/` and are loaded as a playlist through `javafx-media`. The final implementation keeps the soundtrack in resource folders and plays MP3 files through the JavaFX media layer, which is the most reliable way to keep playback consistent in both IDE runs and packaged execution.
 
-```text
-src/
-├── main/
-│   ├── java/
-│   │   └── com/arcade/
-│   │       ├── config/
-│   │       ├── controller/
-│   │       ├── model/
-│   │       ├── service/
-│   │       ├── util/
-│   │       └── view/
-│   └── resources/
-│       └── questions.json
-```
+## Technical Challenges
 
----
+### Visual Composition
+- Maintaining a coherent layout across menu, category selection, gameplay, result, and ranking screens required careful JavaFX spacing and layering.
+- The interface had to remain consistent inside a fixed window size without breaking card rendering or overlay placement.
+- Backgrounds, cards, and HUD elements needed to stack cleanly without visual conflicts.
 
-# Architecture Principles
+### Audio Integration
+- JavaFX media playback depends on formats supported by the runtime, so the soundtrack was standardized on MP3 resources.
+- The audio system was implemented as a dedicated playlist service so track loading, sequencing, and error handling stayed isolated from gameplay logic.
+- Keeping the files in the application resources made the playback path stable across development and distribution.
 
-The project follows these architectural principles:
+## Key Decisions And Lessons Learned
+- Early planning stabilized the game rules, scoring model, and ranking format before the frontend was completed.
+- The backend/frontend split reduced rework because user interface changes did not require changes to the core rules.
+- Backend logic remained largely untouched while the JavaFX layer iterated on layout, navigation, and asset integration.
+- Incremental delivery made it easier to validate gameplay, ranking persistence, and audio behavior step by step.
+- Strong architectural separation is what kept the business logic stable through the final implementation phase.
 
-* MVC hybrid architecture
-* Complete separation between educational content and game logic
-* Backend-first development
-* Terminal-first validation before JavaFX integration
-* Simple and maintainable architecture
-* Modular educational content
-* No unnecessary enterprise patterns
-
----
-
-# Git Workflow
-
-Development is currently handled using feature branches.
-
-Avoid pushing directly to the main branch.
-
----
-
-# Notes
-
-* The project is currently under active development.
-* Gameplay systems are still being implemented.
-* JavaFX visual integration will be added after backend validation is completed.
-* Educational content is fully externalized through JSON files.
-* If using operating systems other than Windows, equivalent shell commands may vary.
+## Authors
+- Team 5 - Group B02

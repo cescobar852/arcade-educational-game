@@ -4,6 +4,7 @@ import com.arcade.controller.CategoryController;
 import com.arcade.controller.GameController;
 import com.arcade.controller.MenuController;
 import com.arcade.controller.RankingController;
+import com.arcade.service.AudioService;
 import com.arcade.service.GameService;
 import com.arcade.service.QuestionService;
 import com.arcade.service.RankingService;
@@ -19,10 +20,14 @@ public class MainApplication extends Application {
 
     private static final int WINDOW_WIDTH = 1280;
     private static final int WINDOW_HEIGHT = 720;
+    private AudioService audioService;
 
     @Override
     public void start(Stage stage) {
         Scene scene = new Scene(new StackPane(), WINDOW_WIDTH, WINDOW_HEIGHT);
+
+        audioService = new AudioService();
+        audioService.loadPlaylist();
 
         QuestionService questionService = new QuestionService();
         GameService gameService = new GameService(questionService);
@@ -51,6 +56,14 @@ public class MainApplication extends Application {
 
         menuController.start();
         stage.show();
+        audioService.play();
+    }
+
+    @Override
+    public void stop() {
+        if (audioService != null) {
+            audioService.stop();
+        }
     }
 
     public static void main(String[] args) {

@@ -5,6 +5,7 @@ import java.util.List;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -19,14 +20,19 @@ public class GameView {
     private static final double CONTENT_WIDTH = 1120.0;
     private static final double ANSWER_ROW_SPACING = 24.0;
     private static final double ANSWER_COLUMN_SPACING = 16.0;
+    private static final String BACKGROUND_RESOURCE = "/images/backgrounds/game-background.png";
 
-    private final BorderPane root;
+    private final StackPane root;
+    private final BorderPane contentRoot;
     private final HeaderPanelView headerPanelView;
     private final QuestionCardView questionCardView;
     private final List<AnswerCardView> answerCards;
 
     public GameView(String questionText, List<String> options, String livesText, String scoreText) {
-        root = new BorderPane();
+        root = new StackPane();
+        contentRoot = new BorderPane();
+
+        ImageView backgroundImageView = SpriteUiFactory.createCoverBackgroundImageView(root, BACKGROUND_RESOURCE);
 
         headerPanelView = new HeaderPanelView(normalizeText(livesText), normalizeText(scoreText));
         questionCardView = new QuestionCardView(normalizeText(questionText));
@@ -57,11 +63,16 @@ public class GameView {
 
         content.getChildren().addAll(questionArea, answersArea);
 
-        root.setTop(headerPanelView.getRoot());
-        root.setCenter(content);
+        contentRoot.setTop(headerPanelView.getRoot());
+        contentRoot.setCenter(content);
+
+        if (backgroundImageView != null) {
+            root.getChildren().add(backgroundImageView);
+        }
+        root.getChildren().add(contentRoot);
     }
 
-    public BorderPane getRoot() {
+    public StackPane getRoot() {
         return root;
     }
 

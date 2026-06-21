@@ -15,6 +15,7 @@ public class RankingController {
     private final Scene scene;
     private final RankingService rankingService;
     private MenuController menuController;
+    private static final int TOP_RANKING_LIMIT = 10;
 
     public RankingController(Scene scene, RankingService rankingService) {
         if (scene == null) {
@@ -33,7 +34,7 @@ public class RankingController {
     }
 
     public void showRankingView() {
-        List<RankingEntry> rankingEntries = rankingService.getRanking();
+        List<RankingEntry> rankingEntries = rankingService.getTopScores(TOP_RANKING_LIMIT);
         RankingView view = new RankingView(rankingEntries);
         view.getMainMenuButton().setOnAction(event -> returnToMenu());
         scene.setRoot(view.getRoot());
