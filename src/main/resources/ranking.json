@@ -27,22 +27,6 @@
   "score" : 200,
   "playedAt" : "2026-05-30T13:13:03"
 }, {
-  "playerName" : "ChrisTest1",
-  "score" : 200,
-  "playedAt" : "2026-05-30T13:18:12"
-}, {
-  "playerName" : "1",
-  "score" : 0,
-  "playedAt" : "2026-05-30T13:48:00"
-}, {
-  "playerName" : "1",
-  "score" : 0,
-  "playedAt" : "2026-05-30T13:48:17"
-}, {
-  "playerName" : "1",
-  "score" : 0,
-  "playedAt" : "2026-05-30T13:48:32"
-}, {
   "playerName" : "Test Player",
   "score" : 2400,
   "playedAt" : "2026-05-30T13:48:59"
@@ -54,4 +38,8 @@
   "playerName" : "ChrisTest3",
   "score" : 1900,
   "playedAt" : "2026-06-01T19:25:26"
+}, {
+  "playerName" : "Test FrontEnd",
+  "score" : 2100,
+  "playedAt" : "2026-06-16T21:18:06"
 } ]
